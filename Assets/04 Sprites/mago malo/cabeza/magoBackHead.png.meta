@@ -1,9 +1,10 @@
 fileFormatVersion: 2
-guid: 2b431182f11c6924381b0e8d70786672
-timeCreated: 1488532569
+guid: 8b688c064aaf77f46a188aa248fd6a89
+timeCreated: 1488797160
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: magoBackHead_0
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,26 +31,45 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
-    wrapMode: -1
-  nPOTScale: 1
+    wrapMode: 1
+  nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
-  alphaIsTransparency: 0
-  textureType: -1
+  alphaIsTransparency: 1
+  textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: magoBackHead_0
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 76
+        width: 52
+        height: 52
+      alignment: 9
+      pivot: {x: 0.5, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19, y: 50.96}
+        - {x: -26, y: 39.96}
+        - {x: -26, y: 4.959999}
+        - {x: -18, y: -1.0400009}
+        - {x: 17, y: -1.0400009}
+        - {x: 26, y: 6.959999}
+        - {x: 26, y: 40.96}
+        - {x: 19, y: 50.96}
     outline: []
   spritePackingTag: 
   userData: 
