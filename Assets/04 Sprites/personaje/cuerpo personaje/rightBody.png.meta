@@ -1,9 +1,10 @@
 fileFormatVersion: 2
 guid: d9e793e1cc4e19d47849f230f9bfc3b4
-timeCreated: 1488536375
+timeCreated: 1488791728
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: rightBody_0
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -38,18 +39,35 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.50012153, y: 0.45103464}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: rightBody_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 84
+        width: 52
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20, y: 22}
+        - {x: -19, y: 22}
+        - {x: -26, y: 11}
+        - {x: -26, y: -22}
+        - {x: 26, y: -22}
+        - {x: 26, y: 16}
     outline: []
   spritePackingTag: 
   userData: 
