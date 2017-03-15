@@ -19,8 +19,11 @@ public class ShotMovement : MonoBehaviour {
 
     GameObject objectiveSprite;
 
+    ShootDamage myDamage;
+
     // Use this for initialization
     void Start () {
+        myDamage = this.GetComponent<ShootDamage>();
         objectivePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         if (type == shootType.target)
         {
@@ -72,6 +75,7 @@ public class ShotMovement : MonoBehaviour {
         if (other.tag == "Enemy")
         {
             other.GetComponent<RedBlink>().startBlink();
+            myDamage.doDamage(other.gameObject);
         }
         else if (other.tag == "enemyAttack") {
             other.GetComponent<ShotMovement>().shootDie();

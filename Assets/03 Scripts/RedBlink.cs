@@ -10,20 +10,50 @@ public class RedBlink : MonoBehaviour {
     public bool blinking;
     bool isRed;
 
-	// Use this for initialization
-	void Start () {
+    bool activeTimeDamage;
+    float damageTime;
+    float damageTimer;
+    float tickDamage;
+    int tickAmount;
+
+    // Use this for initialization
+    void Start () {
         timer = 0.0f;
         isRed = false;
+        activeTimeDamage = false;
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if (blinking) {
+        if (blinking)
+        {
             timer += Time.deltaTime;
-            if (timer > time) {
+            if (timer > time)
+            {
                 changeColor();
                 timer = 0f;
             }
+        }
+        else {
+            timer = 0;
+        }
+
+        if (activeTimeDamage)
+        {
+            damageTimer += Time.deltaTime;
+            if (damageTimer > damageTime / tickAmount) {
+                if (this.tag == "Enemy") {
+                    this.GetComponent<EnemyController>().getDamage(tickDamage);
+                }
+                tickAmount--;
+                if (tickAmount <= 0)
+                {
+                    activeTimeDamage = false;
+                }
+            }
+        }
+        else {
+            damageTimer = 0f;
         }
 	}
 
@@ -47,5 +77,11 @@ public class RedBlink : MonoBehaviour {
             isRed = true;
         }
         
+    }
+    public void timeDamage(float dTime, float dmg, int tickNum) {
+        tickDamage = dmg / tickNum;
+        tickAmount = tickNum;
+        damageTime = dTime;
+        activeTimeDamage = true;
     }
 }
